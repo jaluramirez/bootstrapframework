@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Framework</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/stylesheet.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- SIDEBAR -->
+            <aside class="col-2 d-none d-md-block sidebar">
+                <h5 class="my-4 d-flex align-items-center gap-2">
+                    <img src="/assets/images/logo.png" alt="Dashboard Kit" width="20" height="20">
+                    Dashboard Kit
+                </h5>
+                <ul class="nav nav-pills flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">
+                            <img src="/assets/images/overview.png" class="sidebar-icon" alt="Overview icon">Overview
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <img src="/assets/images/tickets.png" class="sidebar-icon" alt="Ticket icon">Tickets
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <img src="/assets/images/contacts.png" class="sidebar-icon" alt="Contact icon">Contacts
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <img src="/assets/images/agents.png" class="sidebar-icon" alt="Agent icon">Agents
+                        </a>
+                    </li>
+                    <li class="nav-item border-bottom border-dark">
+                        <a class="nav-link" href="#">
+                            <img src="/assets/images/articles.png" class="sidebar-icon" alt="Article icon">Articles
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><img src="/assets/images/settings.png" class="sidebar-icon" alt="Gear icon">
+                            Settings
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <img src="/assets/images/subscriptions.png" class="sidebar-icon" alt="Subscription icon">Subscriptions
+                        </a>
+                    </li>
+                </ul>
+            </aside>
+
+            <!-- MAIN -->
+            <main class="col-md-10">
+                <!-- HEADER -->
+                <header class="d-flex p-3 mb-3 justify-content-between">
+                    <h4>Overview</h4>                    
+                    <div class="d-flex align-items-center gap-4">
+                        <!-- SEARCH -->
+                        <button type="button" class="btn p-0 border-0 bg-transparent">
+                            <img src="assets/images/search.png" width="20" alt="search icon">
+                        </button>
+                        <!-- NOTIF BELL -->
+                        <button type="button" class="btn p-0 border-0 bg-transparent position-relative" data-bs-toggle="modal" data-bs-target="#notif">
+                            <img src="assets/images/bell.png" width="20" alt="notification bell" >
+                            <span class="position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle bg-primary p-1">
+                                <span class="visually-hidden">unread messages</span>
+                            </span>
+                        </button>
+                        <!-- MODAL MSG-->
+                        <div class="modal fade" id="notif" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Notification</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        New Ticket Received.
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- USER ACCT -->
+                        <h6>Jones Ferdinand</h6>
+                        <button type="button" class="btn p-0 rounded-circle border-secondary bg-transparent">
+                            <img src="assets/images/user.png" alt="user image" width="32" height="32" class="rounded-circle">
+                        </button>
+                    </div>
+                </header>
+
+                <!-- TOP 4 CARDS -->
+                <section class="row g-3">
+                    <div class="col-md-3 col-sm-6 mt-2">
+                        <article class="card card-link text-center">
+                            <div class="card-body">
+                                <h6 class="card-title text-muted">Unresolved</h6>
+                                <h3 class="card-text">60</h3>
+                                <a href="#" class="stretched-link"></a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mt-2">
+                        <article class="card card-link text-center">
+                            <div class="card-body">
+                                <h6 class="card-title text-muted">Overdue</h6>
+                                <h3 class="card-text">16</h3>
+                                <a href="#" class="stretched-link"></a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mt-2">
+                        <article class="card card-link text-center">
+                            <div class="card-body">
+                                <h6 class="card-title text-muted">Open</h6>
+                                <h3 class="card-text">43</h3>
+                                <a href="#" class="stretched-link"></a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mt-2">
+                        <article class="card card-link text-center">
+                            <div class="card-body">
+                                <h6 class="card-title text-muted">On hold</h6>
+                                <h3 class="card-text">64</h3>
+                                <a href="#" class="stretched-link"></a>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                
+                <!-- TRENDS -->
+                <section class="row mt-4">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row"> 
+
+                                    <!-- LEFT CARD -->
+                                    <div class="col-md-9">
+                                        <h5 class="mb-0">Today's trends</h5>
+                                        <small class="text-muted d-block">as of 25 May 2019, 09:41 PM</small>
+                                        <!-- CHART JS-->
+                                         <canvas id="trendsChart" class="mt-3"></canvas>
+                                    </div>
+
+                                    <!-- RIGHT CARD -->
+                                    <div class="col-md-3 border-start ps-4 text-center d-flex flex-column justify-content-between">
+                                        <div class="py-2 border-bottom">
+                                            <small class="text-muted">Resolved</small>
+                                            <h5>449</h5>
+                                        </div>
+                                        <div class="py-2 border-bottom">
+                                            <small class="text-muted">Received</small>
+                                            <h5>426</h5>
+                                        </div>
+                                        <div class="py-2 border-bottom">
+                                            <small class="text-muted">Avg first response</small>
+                                            <h5>33m</h5>
+                                        </div>
+                                        <div class="py-2 border-bottom">
+                                            <small class="text-muted">Avg response time</small>
+                                            <h5>3h 8m</h5>
+                                        </div>
+                                        <div class="py-2 border-0"> 
+                                            <small class="text-muted">Resolution within SLA</small>
+                                            <h5>94%</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 2 CARDS -->
+                <section class="row my-4">
+
+                    <!-- LEFT CARD -->
+                    <div class="col-sm-6 mt-2">
+                        <article class="card p-3 h-100">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h5 class="card-title mb-0">Unresolved</h5>
+                                <a href="#" class="text-decoration-none">View details</a>
+                            </div>
+                            <small class="text-muted">Group: Support</small>
+                            <ul class="list-group list-group-flush mt-4">
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Waiting on Feature Request
+                                    <span class="badge bg-transparent text-secondary">4238</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Awaiting Customer Response
+                                    <span class="badge bg-transparent text-secondary">1005</span>
+                                </li>                                
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Awaiting Developer Fix
+                                    <span class="badge bg-transparent text-secondary">914</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Pending
+                                    <span class="badge bg-transparent text-secondary">281</span>
+                                </li>
+                            </ul>
+                        </article>
+                    </div>
+
+                    <!-- RIGHT CARD -->
+                    <div class="col-sm-6 mt-2">
+                        <article class="card p-3 h-100">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h5 class="card-title mb-0">Tasks</h5>
+                                <a href="#" class="text-decoration-none">View all</a>
+                            </div>
+                            <small class="text-muted">Today</small>
+
+                            <ul class="list-group list-group-flush mt-4">
+                                <li class="list-group-item d-flex justify-content-between align-items-center create-task-item">
+                                    <span class="text-muted">Create new task</span>
+                                    <!-- MODAL BUTTON -->
+                                    <button type="button" class="btn btn-primary rounded-circle p-0 d-flex justify-content-center align-items-center"
+                                            style="width: 24px; height: 24px;" data-bs-toggle="modal" data-bs-target="#newtask">
+                                        <span class="fs-6">+</span>
+                                    </button>
+                                    <!-- MODAL MSG-->
+                                    <div class="modal fade" id="newtask" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h1 class="modal-title fs-5" id="exampleModalLabel">New Task</h1>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    Complete pending to add new task!
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <input class="form-check-input" input type="checkbox"> Finish ticket update
+                                        </div>
+                                        <span class="badge bg-warning">URGENT</span>
+                                    </li>
+
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <input class="form-check-input" type="checkbox"> Create new ticket example
+                                    </div>
+                                    <span class="badge bg-success">NEW</span>
+                                </li>
+
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <input class="form-check-input" input type="checkbox" checked> Update ticket report
+                                    </div>
+                                    <span class="badge bg-secondary">DEFAULT</span>
+                                </li>
+                            </ul>
+                        </article>
+                    </div>
+
+                </section>
+
+            </main>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/assets/js/chart.js"></script>
+
+</body>
+</html>

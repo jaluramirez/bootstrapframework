@@ -1,0 +1,19 @@
+{
+  "name": "jalu_ramirez",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "startserver": "lite-server --baseDir=\"bootsie\"",
+    "sassscript": "sass --watch src/scss:bootsie/assets/css",
+    "start": "concurrently \"npm run startserver\" \"npm run sassscript\""
+  },
+  "keywords": [],
+  "author": "Jalu Ramirez",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "lite-server": "^2.6.1",
+    "sass": "^1.98.0"
+  }
+}
